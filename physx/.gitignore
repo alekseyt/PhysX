@@ -1,3 +1,4 @@
 bin/
-compiler/mingw
+compiler/mingw*
+compiler/linux*
 include/PxConfig.h
