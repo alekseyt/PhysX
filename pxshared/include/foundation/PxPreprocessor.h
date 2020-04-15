@@ -156,6 +156,9 @@ define anything not defined on this platform to 0
 #ifndef PX_GCC
 #define PX_GCC 0
 #endif
+#ifndef PX_MINGW
+#define PX_MINGW 0
+#endif
 #ifndef PX_XBOXONE
 #define PX_XBOXONE 0
 #endif
