@@ -39,7 +39,7 @@ namespace shdfnd
 namespace aos
 {
 
-#if PX_UWP
+#if PX_UWP || PX_MINGW
 #define PX_GLOBALCONST extern const __declspec(selectany)
 #else
 #define PX_GLOBALCONST extern const __attribute__((weak))
