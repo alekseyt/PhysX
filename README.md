@@ -14,16 +14,16 @@ $ make
 
 ## Issues
 
-* RTTI is a requirement
+* ~~RTTI is a requirement~~
 * `wine ./SnippetHelloGRB_64` -> pure virtual method called when
   `PhysXGpu_64.dll` is present and loaded
-  
+
 ## Example
 
 ```
-$ file SnippetArticulation_64 
+$ file SnippetArticulation_64
 SnippetArticulation_64: PE32+ executable (GUI) x86-64, for MS Windows
-$ wine ./SnippetArticulation_64                                                                           
+$ wine ./SnippetArticulation_64
 fixme:heap:HeapSetInformation 0xa36000 0 0x33fcf0 4
 SnippetArticulation done.
 ```
@@ -68,7 +68,7 @@ The NVIDIA PhysX SDK is a scalable multi-platform physics solution supporting a 
 
 Please see [Release Notes](http://gameworksdocs.nvidia.com/PhysX/4.1/release_notes.html) for updates pertaining to the latest version.
 
-The full set of documentation can also be found in the repository under physx/documentation or online at http://gameworksdocs.nvidia.com/simulation.html 
+The full set of documentation can also be found in the repository under physx/documentation or online at http://gameworksdocs.nvidia.com/simulation.html
 
 Platform specific information can be found here:
 * [Microsoft Windows](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/windows/readme_windows.html)
@@ -76,7 +76,7 @@ Platform specific information can be found here:
 * [Google Android ARM](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/android/readme_android.html)
 * [Apple macOS](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/mac/readme_mac.html)
 * [Apple iOS](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/ios/readme_ios.html)
- 
+
 
 ## Quick Start Instructions
 

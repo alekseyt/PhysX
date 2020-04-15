@@ -30,9 +30,8 @@
 STRING(TOLOWER "${CMAKE_BUILD_TYPE}" CMAKE_BUILD_TYPE_LOWERCASE)
 
 SET(GCC_WARNINGS "-Wall -Wno-invalid-offsetof -Wno-uninitialized")
-SET(PHYSX_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-strict-aliasing ${GCC_WARNINGS}")
+SET(PHYSX_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -fno-strict-aliasing ${GCC_WARNINGS}")
 SET(PHYSX_CXX_FLAGS "${PHYSX_CXX_FLAGS} -DPX_PHYSX_STATIC_LIB=1") # to avoid issues with dllimport/dllexport
-# SET(PHYSX_CXX_FLAGS "${PHYSX_CXX_FLAGS} -fno-rtti ") # PxProfileAllocatorWrapper.h:80:19: error: cannot use typeid with -fno-rtti
 SET(PHYSX_CXX_FLAGS "${PHYSX_CXX_FLAGS} -Wno-unknown-pragmas") # ignore MSVC stuff
 SET(PHYSX_CXX_FLAGS "${PHYSX_CXX_FLAGS} -DNDEBUG") # FIXME: not set from Release config
 SET(PHYSX_CXX_FLAGS "${PHYSX_CXX_FLAGS}" CACHE STRING "PhysX CXX")
