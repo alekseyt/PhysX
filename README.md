@@ -16,6 +16,18 @@ $ make
 
 * `wine ./SnippetHelloGRB_64` -> pure virtual method called when
   `PhysXGpu_64.dll` is present and loaded
+  
+## Example
+
+```
+$ file SnippetArticulation_64 
+SnippetArticulation_64: PE32+ executable (GUI) x86-64, for MS Windows
+$ wine ./SnippetArticulation_64                                                                           
+fixme:heap:HeapSetInformation 0xa36000 0 0x33fcf0 4
+SnippetArticulation done.
+```
+
+![Без имени](https://user-images.githubusercontent.com/993454/79380062-8e5ce380-7f68-11ea-88ae-1a3ced8c9c06.png)
 
 # NVIDIA PhysX SDK 4.1
 
