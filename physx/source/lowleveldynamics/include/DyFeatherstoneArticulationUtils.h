@@ -212,7 +212,7 @@ namespace Dy
 			return Cm::UnAlignedSpatialVector(top1, bottom1);
 		}
 
-		PX_CUDA_CALLABLE PX_FORCE_INLINE void operator =(SpatialTransform& other)
+		PX_CUDA_CALLABLE PX_FORCE_INLINE void operator =(const SpatialTransform& other)
 		{
 			R = other.R;
 			q = other.q;
