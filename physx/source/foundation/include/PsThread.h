@@ -39,9 +39,9 @@
 
 // todo: these need to go somewhere else
 
-#if PX_WINDOWS_FAMILY || PX_XBOXONE
+#if (PX_WINDOWS_FAMILY || PX_XBOXONE) && !PX_MINGW // note: potentially #if PX_VC
 #define PxSpinLockPause() __asm pause
-#elif PX_LINUX || PX_ANDROID || PX_PS4 || PX_APPLE_FAMILY || PX_SWITCH
+#elif PX_LINUX || PX_ANDROID || PX_PS4 || PX_APPLE_FAMILY || PX_SWITCH || PX_MINGW // note: potentially #elif PX_GCC_FAMILY
 #define PxSpinLockPause() asm("nop")
 #else
 #error "Platform not supported!"
