@@ -25,7 +25,7 @@
 ##
 ## Copyright (c) 2018-2019 NVIDIA Corporation. All rights reserved.
 
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.5)
 project(Snippets C CXX)
 
 IF(NOT DEFINED CMAKEMODULES_VERSION)
@@ -59,13 +59,13 @@ IF(CMAKE_CONFIGURATION_TYPES)
 	SET(CMAKE_CONFIGURATION_TYPES "${CMAKE_CONFIGURATION_TYPES}" CACHE STRING
 		"Reset config to what we need" 
 		FORCE)
-	
-	# Need to define these at least once.	
+ 
+	# Need to define these at least once. 
 	SET(CMAKE_SHARED_LINKER_FLAGS_CHECKED "/DEBUG")
 	SET(CMAKE_SHARED_LINKER_FLAGS_PROFILE "/DEBUG")
 
 	SET(CMAKE_EXE_LINKER_FLAGS_PROFILE "/DEBUG")
-	SET(CMAKE_EXE_LINKER_FLAGS_CHECKED "/DEBUG")	
+	SET(CMAKE_EXE_LINKER_FLAGS_CHECKED "/DEBUG") 
 ENDIF()
 
 
@@ -86,11 +86,11 @@ SET(SNIPPETS_LIST Articulation BVHStructure ContactModification ContactReport Co
 	CustomJoint CustomProfiler DeformableMesh HelloWorld ImmediateArticulation ImmediateMode Joint MBP MultiThreading
 	PrunerSerialization RaycastCCD Serialization SplitFetchResults 
 	SplitSim Stepper ToleranceScale TriangleMeshCreate)
-	
+ 
 LIST(APPEND SNIPPETS_LIST ${PLATFORM_SNIPPETS_LIST})
-		
+  
 SET(SNIPPETS_VEHICLE_LIST NestedScene Vehicle4W VehicleContactMod VehicleMultiThreading 
-	VehicleNoDrive VehicleScale VehicleTank)	
+	VehicleNoDrive VehicleScale VehicleTank) 
 
 LIST(APPEND SNIPPETS_VEHICLE_LIST ${PLATFORM_SNIPPETS_VEHICLE_LIST})
 

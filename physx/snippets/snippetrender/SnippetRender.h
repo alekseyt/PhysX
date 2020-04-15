@@ -36,7 +36,9 @@
 
 #if PX_WINDOWS
 	#include <windows.h>
+#if PX_VC
 	#pragma warning(disable: 4505)
+#endif
 	#include <glut.h>
 #elif PX_LINUX_FAMILY
 	#include <GL/glut.h>

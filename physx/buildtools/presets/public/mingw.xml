@@ -2,12 +2,13 @@
 <preset name="mingw" comment="Mingw PhysX SDK general settings">
   <platform targetPlatform="mingw" compiler="cxx" />
   <CMakeSwitches>
-    <cmakeSwitch name="PX_BUILDSNIPPETS" value="False" comment="Generate the snippets" />
+    <cmakeSwitch name="PX_BUILDSNIPPETS" value="True" comment="Generate the snippets" />
     <cmakeSwitch name="PX_BUILDPUBLICSAMPLES" value="False" comment="Generate the samples" />
     <cmakeSwitch name="PX_GENERATE_STATIC_LIBRARIES" value="True" comment="Generate static libs" />
   </CMakeSwitches>
   <CMakeParams>
     <cmakeParam name="CMAKE_INSTALL_PREFIX" value="install/mingw/PhysX" comment="Install path relative to PhysX SDK root" />
+    <cmakeParam name="CMAKE_LIBRARY_ARCHITECTURE" value="unknown-w32-gnu" comment="To make snippets happy" />
     <cmakeParam name="CMAKE_BUILD_TYPE" value="Release" comment="For debug _DEBUG has to be defined" />
   </CMakeParams>
 </preset>
