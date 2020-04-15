@@ -28,7 +28,7 @@
 IF(TARGET_BUILD_PLATFORM STREQUAL "mac" OR TARGET_BUILD_PLATFORM STREQUAL "ios")
 	cmake_minimum_required(VERSION 3.12)
 ELSE()
-	cmake_minimum_required(VERSION 3.11)
+	cmake_minimum_required(VERSION 3.5)
 ENDIF()
 
 project(PhysXSDK C CXX)
