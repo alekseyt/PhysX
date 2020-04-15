@@ -52,7 +52,7 @@ All definitions have a value of 1 or 0, use '#if' instead of '#ifdef'.
 /**
 Compiler defines, see http://sourceforge.net/p/predef/wiki/Compilers/
 */
-#if defined(__MINGW32__)
+#if defined(__MINGW32__) || defined(__MINGW64__)
 #define PX_MINGW 1
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1910
