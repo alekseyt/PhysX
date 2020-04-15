@@ -32,9 +32,9 @@
 
 #include "foundation/PxPreprocessor.h"
 
-#if PX_WINDOWS_FAMILY
+#if (PX_WINDOWS_FAMILY && !PX_GCC_FAMILY)
 #include "foundation/windows/PxWindowsIntrinsics.h"
-#elif(PX_LINUX || PX_ANDROID || PX_APPLE_FAMILY || PX_PS4)
+#elif(PX_LINUX || PX_ANDROID || PX_APPLE_FAMILY || PX_PS4 || PX_MINGW)
 #include "foundation/unix/PxUnixIntrinsics.h"
 #elif PX_XBOXONE
 #include "foundation/XboxOne/PxXboxOneIntrinsics.h"

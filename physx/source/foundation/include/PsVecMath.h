@@ -65,7 +65,7 @@
 #define COMPILE_VECTOR_INTRINSICS 0
 #endif
 
-#if COMPILE_VECTOR_INTRINSICS && PX_INTEL_FAMILY&&(PX_UNIX_FAMILY || PX_PS4)
+#if COMPILE_VECTOR_INTRINSICS && PX_INTEL_FAMILY && (PX_UNIX_FAMILY || PX_PS4 || PX_MINGW)
 // only SSE2 compatible platforms should reach this
 #if PX_EMSCRIPTEN
 #include <emmintrin.h>

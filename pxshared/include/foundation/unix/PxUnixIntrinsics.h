@@ -33,7 +33,8 @@
 #include "foundation/Px.h"
 #include "foundation/PxSharedAssert.h"
 
-#if !(PX_LINUX || PX_ANDROID || PX_PS4 || PX_APPLE_FAMILY)
+// note: switch is using its own intrinsics, pehaps PX_GCC_FAMILY is not really suitable for this, so PX_MINGW instead
+#if !(PX_LINUX || PX_ANDROID || PX_PS4 || PX_APPLE_FAMILY || PX_MINGW)
 #error "This file should only be included by Unix builds!!"
 #endif
 
