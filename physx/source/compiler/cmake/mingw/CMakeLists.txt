@@ -81,7 +81,7 @@ ELSE()
 	INCLUDE(SceneQuery.cmake)
 	INCLUDE(SimulationController.cmake)
 	INCLUDE(FastXml.cmake)
-	# INCLUDE(PhysXPvdSDK.cmake)
+	INCLUDE(PhysXPvdSDK.cmake)
 	INCLUDE(PhysXTask.cmake)
 
 	# Set folder PhysX SDK to all common SDK source projects
@@ -97,7 +97,7 @@ ELSE()
 	SET_PROPERTY(TARGET SceneQuery PROPERTY FOLDER "PhysX SDK")
 	SET_PROPERTY(TARGET SimulationController PROPERTY FOLDER "PhysX SDK")
 	SET_PROPERTY(TARGET FastXml PROPERTY FOLDER "PhysX SDK")
-	# SET_PROPERTY(TARGET PhysXPvdSDK PROPERTY FOLDER "PhysX SDK")
+	SET_PROPERTY(TARGET PhysXPvdSDK PROPERTY FOLDER "PhysX SDK")
 	SET_PROPERTY(TARGET PhysXTask PROPERTY FOLDER "PhysX SDK")
 	SET_PROPERTY(TARGET PhysXFoundation PROPERTY FOLDER "PhysX SDK")
 
