@@ -77,9 +77,9 @@ PX_FOUNDATION_API void disableFPExceptions();
 } // namespace shdfnd
 } // namespace physx
 
-#if PX_WINDOWS_FAMILY || PX_XBOXONE
+#if (PX_WINDOWS_FAMILY || PX_XBOXONE) && !PX_MINGW
 #include "windows/PsWindowsFPU.h"
-#elif (PX_LINUX && PX_SSE2) || PX_PS4 || PX_OSX
+#elif (PX_LINUX && PX_SSE2) || PX_PS4 || PX_OSX || PX_MINGW
 #include "unix/PsUnixFPU.h"
 #else
 PX_INLINE physx::shdfnd::SIMDGuard::SIMDGuard()
