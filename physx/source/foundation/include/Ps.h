@@ -37,7 +37,7 @@
 /**
 Platform specific defines
 */
-#if ((PX_WINDOWS_FAMILY || PX_XBOXONE) && !PX_MINGW) // note: i think this should be #if PX_VC really
+#if PX_WINDOWS_FAMILY || PX_XBOXONE
 #pragma intrinsic(memcmp)
 #pragma intrinsic(memcpy)
 #pragma intrinsic(memset)

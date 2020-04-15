@@ -35,9 +35,7 @@
 #include "PsArray.h"
 
 #include <winsock2.h>
-#if PX_VC
 #pragma comment(lib, "Ws2_32")
-#endif
 
 namespace physx
 {
@@ -163,15 +161,11 @@ bool SocketImpl::connect(const char* host, uint16_t port, uint32_t timeout)
 	fd_set exceptfs;
 	FD_ZERO(&writefs);
 	FD_ZERO(&exceptfs);
-#if PX_VC
 #pragma warning(push)
 #pragma warning(disable : 4127 4548)
-#endif
 	FD_SET(mSocket, &writefs);
 	FD_SET(mSocket, &exceptfs);
-#if PX_VC
 #pragma warning(pop)
-#endif
 	timeval timeout_;
 	timeout_.tv_sec = long(timeout / 1000);
 	timeout_.tv_usec = long(((timeout % 1000) * 1000));

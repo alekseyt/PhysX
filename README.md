@@ -14,6 +14,7 @@ $ make
 
 ## Issues
 
+* RTTI is a requirement
 * `wine ./SnippetHelloGRB_64` -> pure virtual method called when
   `PhysXGpu_64.dll` is present and loaded
   
