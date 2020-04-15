@@ -3,6 +3,19 @@
 * WIP
 * Not tested on Windows
 * Static libraries only
+* Release build only
+* No examples, ~~no snippets~~
+
+```
+$ CXX=x86_64-w64-mingw32-g++ CC=x86_64-w64-mingw32-gcc ./generate_projects.sh
+$ cd compiler/mingw
+$ make
+```
+
+## Issues
+
+* `wine ./SnippetHelloGRB_64` -> pure virtual method called when
+  `PhysXGpu_64.dll` is present and loaded
 
 # NVIDIA PhysX SDK 4.1
 
