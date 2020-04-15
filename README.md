@@ -1,3 +1,9 @@
+# Mingw-w64 port
+
+* WIP
+* Not tested on Windows
+* Static libraries only
+
 # NVIDIA PhysX SDK 4.1
 
 Copyright (c) 2019 NVIDIA Corporation. All rights reserved.
