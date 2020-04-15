@@ -30,6 +30,23 @@ SnippetArticulation done.
 
 ![Без имени](https://user-images.githubusercontent.com/993454/79380062-8e5ce380-7f68-11ea-88ae-1a3ced8c9c06.png)
 
+## Changes
+
+Most importantly:
+
+1. `PX_MINGW` is introduced in `PxPreprocessor.h` + some changes towards
+   use of compiler-specific `PX_VC` instead of OS-specific `PX_WINDOWS_FAMILY`
+2. `ThreadImpl::setName()` isn't implemented in Windows threads for the
+   same reason it isn't implemented in Linux threads
+3. Mingw build is using Unix-intrinsics and Unix-FPU, but Windows-threads
+   and Windows-sockets.
+
+Other changes are just juggling with `PX_MINGW`, nothing special. Although
+worth noting:
+
+* Mingw doesn't define `__int8_t` and family
+* `__attribute__((weak))` doesn't do what it's supposed to do
+
 # NVIDIA PhysX SDK 4.1
 
 Copyright (c) 2019 NVIDIA Corporation. All rights reserved.

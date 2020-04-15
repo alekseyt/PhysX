@@ -338,6 +338,7 @@ void ThreadImpl::setName(const char* name)
 		}
 #elif PX_MINGW
 		// this actually doesn't work in Mingw
+		// for the same reason why it isn't implemeted on Linux
 #endif
 	}
 }
