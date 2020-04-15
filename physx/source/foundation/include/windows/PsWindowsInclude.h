@@ -42,10 +42,12 @@
 
 // We only support >= Windows XP, and we need this for critical section and
 // Setting this hides some important APIs (e.g. LoadPackagedLibrary), so don't do it
+#if !PX_MINGW
 #if !PX_UWP
 #define _WIN32_WINNT 0x0501
 #else
 #define _WIN32_WINNT 0x0602 
+#endif
 #endif
 
 // turn off as much as we can for windows. All we really need is the thread functions(critical sections/Interlocked*
@@ -70,7 +72,9 @@
 #define NOMB
 #define NOMEMMGR
 #define NOMETAFILE
+#ifndef NOMINMAX
 #define NOMINMAX
+#endif
 #define NOOPENFILE
 #define NOSCROLL
 #define NOSERVICE
@@ -92,10 +96,14 @@
 #define NOMSG
 #endif
 
+#if PX_VC
 #pragma warning(push)
 #pragma warning(disable : 4668) //'symbol' is not defined as a preprocessor macro, replacing with '0' for 'directives'
 #include <windows.h>
 #pragma warning(pop)
+#else
+#include <windows.h>
+#endif
 
 #if PX_SSE2
 #include <xmmintrin.h>

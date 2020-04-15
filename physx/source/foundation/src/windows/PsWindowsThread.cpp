@@ -319,6 +319,7 @@ void ThreadImpl::setName(const char* name)
 
 	if (getThread(this)->state == _ThreadImpl::Started)
 	{
+#if PX_VC
 		THREADNAME_INFO info;
 		info.dwType = 0x1000;
 		info.szName = name;
@@ -335,6 +336,9 @@ void ThreadImpl::setName(const char* name)
 		{
 			// this runs if not attached to a debugger (thus not really naming the thread)
 		}
+#elif PX_MINGW
+		// this actually doesn't work in Mingw
+#endif
 	}
 }
 
